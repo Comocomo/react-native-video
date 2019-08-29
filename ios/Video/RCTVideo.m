@@ -1307,7 +1307,8 @@ static int const RCTVideoUnset = -1;
     _playerLayer = [AVPlayerLayer playerLayerWithPlayer:_player];
     _playerLayer.frame = self.bounds;
     _playerLayer.needsDisplayOnBoundsChange = YES;
-    
+    _playerLayer.shouldRasterize = YES;
+      
     // to prevent video from being animated when resizeMode is 'cover'
     // resize mode must be set before layer is added
     [self setResizeMode:_resizeMode];
